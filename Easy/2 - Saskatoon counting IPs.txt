@@ -1,0 +1,9 @@
+Liste toutes les IP du fichier de log :
+awk '{print $1}' access.log
+
+Liste toutes les IP du fichier de log en comptant combien de fois une IP apparait dans le fichier de log :
+awk '{print $1}' access.log | sort | uniq -c | sort -rn > ips.txt
+
+Récupération manuel de l'IP "66.249.73.135" dans le fichier ips.txt (482 apparitions)
+Commande pour valider le lab :
+echo "66.249.73.135" > /home/admin/highestip.txt

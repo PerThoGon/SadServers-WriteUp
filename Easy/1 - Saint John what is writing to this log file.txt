@@ -1,0 +1,10 @@
+Avec la commande "ls" on voit qu'un fichier "badlog.py" est présent dans le dossier utilisateur.
+nano badlog.py
+
+Le script ouvre le fichier de log /var/log/bad.log pour écrire dedans.
+On va donc chercher le processus qui a exécuter ce script :
+ps aux | grep "badlog.py"
+--> admin        590  0.0  1.8  12508  8384 ?        S    00:02   0:00 /usr/bin/python3 /home/admin/badlog.py
+
+On tue ensuite le processus pour valider le lab :
+kill 590
